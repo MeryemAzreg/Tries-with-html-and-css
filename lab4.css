@@ -1,0 +1,75 @@
+*{
+    font-family:"oswald";
+}
+.container{
+    background-color: bisque;
+    width: 50%;
+    padding: 5px;
+}
+.column-1{
+    float: left;
+    width: 35%;
+    margin-top: 5px;
+    text-align: right;
+    height: 100%;
+
+}
+.column-2{
+    float: left;
+    width: 65%;
+    margin-top: 5px;
+}
+input[type=text],input[type=submit],input[type=password],input[type=date],select, textarea{
+    width: 80%;
+    padding: 10px;
+    /*border: none;*/
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    display:inline-block;
+}
+input[type=text]:focus, textarea:focus, select:focus,input[type=password]:focus,input[type=date]:focus{
+    background-color: rgb(235, 224, 210);
+}
+label{
+    letter-spacing: 2px;
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+}
+input[type=submit]{
+    background-color: rgb(227, 161, 80);
+}
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #db691d;
+    color: #fff;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+:required + .message::before {
+    content: "* ";
+}
+@media screen and (max-width: 600px){
+    .column-1,.column-2{
+        width: 100%;
+        margin-top: 0;
+    }
+    .container{
+        width: 80%;
+    }
+
+}
+@media screen and (max-width: 1000px){
+    .column-1,.column-2{
+        width: 100%;
+        margin-top: 0;
+    }
+    .container{
+        width: 80%;
+    }
+}
